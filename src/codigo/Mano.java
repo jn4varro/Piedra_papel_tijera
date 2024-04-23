@@ -31,7 +31,7 @@ public class Mano {
 		
 
 	//Nos falta aquí un método que se encargue comparar si una jugada gana a otra
-	public boolean compararJugadas(Mano mano){
+	public boolean ganaContra(Mano mano){
 		// a ver que sale aqui
 		String mano1 = this.jugada;
 		String mano2 = mano.getJugada();
@@ -47,6 +47,7 @@ public class Mano {
 	    	   return false;
 	       }
 		// pero en caso de empate? habr'a que cambiar el tipo de funcion?
+		
 
 	}
 	}
