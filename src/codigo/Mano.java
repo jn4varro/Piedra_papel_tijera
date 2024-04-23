@@ -11,7 +11,9 @@ public class Mano {
 	public String getJugada() {
 		return jugada;
 	}
-
+	
+// Seria bueno que el setter se encargara de pasar todo a mayuscula y que comprobara que
+	// fuera una de las opciones posibles: PIEDRA PAPEL TIJERA
 	public void setJugada(String jugada) {
 		this.jugada = jugada;
 	}
