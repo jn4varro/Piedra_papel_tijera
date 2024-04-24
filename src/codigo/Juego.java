@@ -13,15 +13,33 @@ public class Juego {
 
 //Crear constructor que inicialice los dos jugadores
   // 
-  public Juego....
+  public Juego (Jugador jugador1, Jugador jugador2){
+	  //recibimos por parametro 2 objetos de la clase Jugador
+	  this.jugador1 =  jugador1;
+	  this.jugador2 = jugador2;
+ }
 
   //Metodo que se llama jugarPartida()
   // declaaralo como consideres
-   public .....
-
+   public void jugarPartida() {
+	   Mano[] jugadasJ1 = jugador1.getJugadas();
+	   Mano[] jugadasJ2 = jugador2.getJugadas();
+	  for (int i = 0; i < 3; i ++) {
+		 boolean result = jugadasJ1[i].ganaContra(jugadasJ2[i]);  
+		 if(result) {
+			 mostrarResultado(result);
+		 }else {
+			 mostrarResultado(result);
+		 }
+	  }
+   }
   //Imprimir resultado partida junto con los datos del juego
-  public String mostrarResultado(){
-    
+  public String mostrarResultado(boolean result){
+    if(result) {
+    	System.out.println( jugador1 + "Gana la partida");
+    }else {
+    	System.out.println( jugador2 + "Gana la partida");
+    }
   }
   
 }

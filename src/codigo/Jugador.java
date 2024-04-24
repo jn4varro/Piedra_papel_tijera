@@ -23,9 +23,20 @@ public class Jugador {
 		 //utilizamos el número aleatorio como índice en el array opciones
 		  String opcion = opciones[num];
 		  //actualizamos con el setter del atributo de la mano correspondiente en esta iteración
+		  jugadas[i] = new Mano("");
 		  jugadas[i].setJugada(opcion);
 	  }
 	  
+  }
+  
+  //me esta dando revolcones esto, necesito crear unos get/set por no cambiar los modificadores
+  
+  public Mano[] getJugadas() {
+	  return jugadas;
+  }
+  
+  public void setJugadas(Mano[] jugadas) {
+	  this.jugadas = jugadas;
   }
   
   }

@@ -44,9 +44,10 @@ public class Mano {
 				return true;
 				
 	       }else {
+	    	   
 	    	   return false;
 	       }
-		// pero en caso de empate? habr'a que cambiar el tipo de funcion?
+	
 		
 
 	}
