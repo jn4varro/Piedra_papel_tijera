@@ -23,7 +23,6 @@ public class Jugador {
 		 //utilizamos el número aleatorio como índice en el array opciones
 		  String opcion = opciones[num];
 		  //actualizamos con el setter del atributo de la mano correspondiente en esta iteración
-		  jugadas[i] = new Mano("");
 		  jugadas[i].setJugada(opcion);
 	  }
 	  

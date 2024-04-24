@@ -6,17 +6,19 @@ package codigo;
 // Añade los atributos que consideres necesarios
 public class Juego {
 
-
+  private int contador1;
+  private int contador2;
   private Jugador jugador1;
   private Jugador jugador2;
   
 
 //Crear constructor que inicialice los dos jugadores
   // 
-  public Juego (Jugador jugador1, Jugador jugador2){
-	  //recibimos por parametro 2 objetos de la clase Jugador
-	  this.jugador1 =  jugador1;
-	  this.jugador2 = jugador2;
+  public Juego (){
+	  this.jugador1 =  new Jugador();
+	  this.jugador2 =  new Jugador();
+	  this.contador1 = 0;
+	  this.contador2 = 0;
  }
 
   //Metodo que se llama jugarPartida()
@@ -25,21 +27,22 @@ public class Juego {
 	   Mano[] jugadasJ1 = jugador1.getJugadas();
 	   Mano[] jugadasJ2 = jugador2.getJugadas();
 	  for (int i = 0; i < 3; i ++) {
-		 boolean result = jugadasJ1[i].ganaContra(jugadasJ2[i]);  
-		 if(result) {
-			 mostrarResultado(result);
+		 
+		  if(jugadasJ1[i].ganaContra(jugadasJ2[i]) == true) {
+			contador1 ++;
 		 }else {
-			 mostrarResultado(result);
+			contador2 ++;
 		 }
 	  }
    }
   //Imprimir resultado partida junto con los datos del juego
-  public String mostrarResultado(boolean result){
-    if(result) {
-    	System.out.println( jugador1 + "Gana la partida");
-    }else {
-    	System.out.println( jugador2 + "Gana la partida");
-    }
-  }
+  public void mostrarResultado(){
+	  //aqui podria tambien meter un for y recorrer cada jugada y compararla (jugador 1 ha sacado piedra...)
+	if(contador1 > contador2) {
+		 System.out.println(jugador1 + "Ha Ganado la partida, con un total de: " + contador1 + "rondas ganadas" );
+	}else {
+		System.out.println(jugador2 + "Ha Ganado la partida, con un total de: " + contador1 + "rondas ganadas" );
+	}
+}
   
 }
