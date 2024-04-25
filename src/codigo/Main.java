@@ -5,10 +5,10 @@ package codigo;
 public class Main {
 
 	public static void main(String[] args) {
-		
-		Juego prueba = new Juego();
-		prueba.jugarPartida();
-		prueba.mostrarResultado();
+		Juego juego = new Juego();
+		juego.jugarPartida();
+		juego.mostrarResultado();
+
 	}
 
 }
